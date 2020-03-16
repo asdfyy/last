@@ -1,21 +1,20 @@
 /* IMPORT CSS */
 @import url("grid.css");
 
-img {
-	max-width:100%;
-	height: auto;/*高さ自動*/
+@mixin hoge($color: #fff, $size: 1rem) {
+    color: $color;
+    font-size: $size;
 }
+
 a {
     display:block;
     color: #666;
     text-decoration-line: none;
 }
-a:hover { 
-    color: #999;
-}
-a img:hover {
-	opacity: 0.8;
-}
+// a:hover { 
+//     color: #999;
+// }
+
 .underline {
 	border-bottom: 3px solid #000;
 	padding-bottom: 0.5rem;
@@ -25,15 +24,15 @@ a img:hover {
 -------------------------------------*/
 .head {
 	display: flex;
-    flex-direction: row;
     background-color: whitesmoke;
 }
 
 .head h1 { 
+    width: 50vw;
     padding: 1rem 0;
 }
 .searchbox {
-	margin-left: auto;
+    margin-left: auto;
     background-color: ghostwhite;
     width: 300vw;
 
@@ -53,10 +52,17 @@ nav li a {
     text-decoration: none;
     text-align: center;
 }
-nav a:hover {
-    color: blue;
-    background-color: #f7f7f7;    
+
+ol {
+    display: none;
 }
+b{
+    display: none;
+}
+// nav a:hover {
+//     color: blue;
+//     background-color: #f7f7f7;    
+// }
 nav a {
     padding: 1rem;
 }
@@ -111,54 +117,46 @@ nav li {
 }
 }
 
-/*メイン画像
+/*画像スライダー
 -------------------------------------*/
-.mainimg img {
+.bigimage {
+    height: 90vh;
 	width: 100vw;
 }
 
 /*メインコンテンツ
 -------------------------------------*/
-main {
-    margin: 5rem 0 5rem 0;
-}
 
-/*新着情報
--------------------------------------*/
-.news h2 {
-    border-bottom: 3px solid #000;
-	padding-bottom: 0.5rem;
-}
-.news li {
-    list-style-type: none;
-	border-bottom: 1px solid #ccc;
-	padding: 0.5rem 0;
-}
 
-/*フッター
--------------------------------------*/
-footer {
-    background-color: #f7f7f7;
-    padding: 5rem 0;
-}
-footer h5 {
-    border-bottom: 3px solid #ccc;
-}
 
-/*コピーライト
--------------------------------------*/
-.copyright {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #fff;
-}
-.copyright a {
-    color: #000;
-    text-decoration: none;
-	display: inline-block;
-}
 
-/*ページトップへ戻るボタン
+
+
+
+// /*新着情報（ボツ）
+// -------------------------------------*/
+// .news h2 {
+//     border-bottom: 3px solid #000;
+// 	padding-bottom: 0.5rem;
+// }
+// .news li {
+//     list-style-type: none;
+// 	border-bottom: 1px solid #ccc;
+// 	padding: 0.5rem 0;
+// }
+
+// /*フッター
+// -------------------------------------*/
+// footer {
+//     background-color: #f7f7f7;
+//     padding: 5rem 0;
+// }
+// footer h5 {
+//     border-bottom: 3px solid #ccc;
+// }
+
+
+/*ページトップへ戻るボタン（出品ボタンにも応用可？）
 -------------------------------------*/
 #pagetop {
     position: fixed;

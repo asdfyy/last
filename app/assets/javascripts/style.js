@@ -1,23 +1,22 @@
-$(function(){
-        $("#open").show();
-        $("#close").hide();
-    // アイコンをクリック
-	$("#open").click(function(){
-		// ulメニューを開閉する
-		$("#navi").slideToggle();
-        $("#open").hide();
-        $("#close").show();
-	});
+// $(function(){
+//         $("#open").show();
+//         $("#close").hide();
+//     // アイコンをクリック
+// 	$("#open").click(function(){
+// 		// ulメニューを開閉する
+// 		$("#navi").slideToggle();
+//         $("#open").hide();
+//         $("#close").show();
+// 	});
  
-    // アイコンをクリック
-	$("#close").click(function(){
-		// ulメニューを開閉する
-		$("#navi").slideToggle();
-        $("#open").show();
-        $("#close").hide();
-	});
-});    
-
+//     // アイコンをクリック
+// 	$("#close").click(function(){
+// 		// ulメニューを開閉する
+// 		$("#navi").slideToggle();
+//         $("#open").show();
+//         $("#close").hide();
+// 	});
+// });
 
 
 $(function () {
@@ -42,13 +41,41 @@ $(function () {
 
 $(function () {
     $('.mainimg').slick({
-        dots: true,
+        prevArrow: false,
+        nextArrow: false,
+        // dots: true,
         fade: true,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 500,
     });
 });
 
-$(document).ready(function() {
-    $("p").text("jQuery稼働テスト(稼働中)");
+$(function () {
+    $('span').hover(
+        function(){
+        $('span').next().show();
+        // $('span').css('background-color', '#999');
+        },
+        function(){
+        $('span').css('background-color', '');
+        $('ol').hide();
+        $('.tabboo').hide();
+        }
+    );
 });
+
+
+// $(function () {
+//     // 親メニュー処理
+//     $('span').hover(function() {
+//       // メニュー表示/非表示
+//       $(this).next('b').show('fast');
+//     });
+  
+//     // 子メニュー処理
+//     $('c').hover(function(e) {
+//       // メニュー表示/非表示
+//       $(this).children('b').show('fast');
+//       e.stopPropagation();
+//     });
+//   });
